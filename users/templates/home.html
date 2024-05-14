@@ -1,0 +1,13 @@
+{% block title %}
+
+<h1>HOME PAGE</h1>
+<br />
+<h2>Welcome</h2>
+{% if user.is_authenticated %} Hello, {{ user.username }} <br />
+<a href="/signout" class="btn btn-danger">Logout</a>
+{% else %}
+<a href="/signin" class="btn btn-primary"
+  ><span class="glyphicon glyphicon-log-in"></span>Login</a
+>
+<a href="/signup" class="btn btn-success">Sign-up</a>
+{% endif %} {% endblock %}
